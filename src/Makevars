@@ -1,0 +1,12 @@
+# -*- Makefile -*-
+
+## private CPP flags:
+PKG_CPPFLAGS = # -I./Something
+
+## we use the BLAS and the LAPACK library:
+PKG_LIBS = $(SUBLIBS) $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS)
+
+
+
+MkInclude = $(R_HOME)/etc${R_ARCH}/Makeconf
+
