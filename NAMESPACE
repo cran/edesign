@@ -1,5 +1,6 @@
-# Default NAMESPACE created by R
-# Remove the previous line if you edit this file
+useDynLib(edesign)
 
 # Export all names
 exportPattern(".")
+# methods:
+S3method(print, monet)

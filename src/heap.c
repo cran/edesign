@@ -231,9 +231,12 @@ void heap_traverse(heap_type *heap)
 heap_element_type *heap_drop(heap_type *heap)
 {
     heap_element_type *ptr,*destroy;
+    int lerr;
 
-    if(! (ptr=heap_element_init(NULL,NULL,heap->top->down->n,0,0)))
-	/* error("memory exhausted");*/ exit(1);
+    if(! (ptr=heap_element_init(NULL,NULL,heap->top->down->n,0,0))){
+	/* error("memory exhausted"); exit(1); */
+        lerr=1;
+    }
 
     if(heap->top->down->bound!=-1)
 	{

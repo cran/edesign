@@ -2,6 +2,8 @@
 #include "entrp.h"
 #include <stdlib.h>
 
+/* #define VERBOSE 1 */
+
 void entrp(double *A,
 	   int *lda,
 	   int *na,
@@ -38,15 +40,17 @@ void entrp(double *A,
     double LB,UB,det,RCOND,UB_Work; 
     heap_type *subproblems;
     heap_element_type *act_subproblem, *act_subproblem_Work;
-    int i,j,k,ni,cardf,carde,ierr;
-    *iter=0;
+    int i,j,k,ni,cardf,carde,ierr,lerr;
+    *iter=0;lerr=0;
 	LB=*opt;
 
+#ifdef VERBOSE
     if(*verbose!=0)
 	{
 	    printf("Init: \n");
 	    printf("LB:%e\n",LB);
 	}
+#endif
 
     for(i=0;i<=(*nf)-1;i++)
 	ind[i]=i+1;
@@ -87,15 +91,21 @@ void entrp(double *A,
     if (cardf==0)
 	UB=2*LB;
     
+#ifdef VERBOSE
     if(*verbose!=0)
 	{
 	    printf("\nbound\n"); 
 	    printf("UB:%e\n",UB);
 	}
-    if(! (subproblems=heap_init()))
-	/* error("memory exhausted"); */ exit(1);
-    if(! (act_subproblem=heap_element_init(F,E,*ne,UB,0)))
-	/* error("memory exhausted"); */ exit(1);
+#endif
+    if(! (subproblems=heap_init())){
+	/* error("memory exhausted"); exit(1); */
+        lerr=1;
+    }
+    if(! (act_subproblem=heap_element_init(F,E,*ne,UB,0))){
+	/* error("memory exhausted"); exit(1); */
+        lerr=1;
+    }
 
 
     /* heap_element_print(act_subproblem);  */
@@ -103,18 +113,22 @@ void entrp(double *A,
     /* heap_traverse(subproblems); */
     
     diff=UB-LB;
+#ifdef VERBOSE
     if(*verbose!=0)
 	{
 	    printf("\nbegin of the loop!! tolerance: %e\n",*tol);  
 	}
+#endif
     while(diff>*tol && subproblems->count>0)
 	{
 	    (*iter)++; 
 	    
+#ifdef VERBOSE
 	    if(*verbose!=0)
 	 	{
 		    printf("iter: %i, heap: %i\n",*iter,subproblems->count); 
 		}
+#endif
 	    /* heap_traverse(subproblems);  */
 	    
 	    act_subproblem=heap_drop(subproblems);
@@ -151,8 +165,10 @@ void entrp(double *A,
 		    if(act_subproblem->E[i]>0)
 			{
 			    
-			    if(! (act_subproblem_Work=heap_element_init(NULL,NULL,*ne,0,0)))
-				/* error("memory exhausted"); */  exit(1);
+			    if(! (act_subproblem_Work=heap_element_init(NULL,NULL,*ne,0,0))){
+				/* error("memory exhausted"); exit(1);*/  
+                                lerr=1;
+                            }
 			    heap_element_copy(act_subproblem_Work,act_subproblem);
 			    
 			    act_subproblem_Work->E[i]=0;
@@ -215,8 +231,10 @@ void entrp(double *A,
 					}
 				}
 							    
-			    if(! (act_subproblem_Work=heap_element_init(NULL,NULL,*ne,0,0)))
-				/* error("memory exhausted"); */  exit(1);
+			    if(! (act_subproblem_Work=heap_element_init(NULL,NULL,*ne,0,0))){
+				/* error("memory exhausted"); exit(1);*/  
+                                lerr=1;
+                            }
 			    
 			    heap_element_copy(act_subproblem_Work,act_subproblem);
 			    act_subproblem_Work->E[i]=0;
@@ -281,8 +299,10 @@ void entrp(double *A,
 			    UB=subproblems->top->down->b;
 			    diff=UB-LB;
 			    
+#ifdef VERBOSE
 			    if (subproblems->count!=0 && *verbose!=0)
 				printf("diff:%e LB: %e UB: %e\n",diff, LB, UB);
+#endif
 			    
 			    
 			} 
@@ -291,11 +311,13 @@ void entrp(double *A,
 		    /***** End While *****/
 		}
 	}
+#ifdef VERBOSE
     if(*verbose!=0)
 	{
 	    printf("\nEnd\n");
 	    /* printf("diff:%e LB: %e UB: %e\n",diff, LB, UB); */
 	}
+#endif
     
     /* LB is numerically better than UB !! */
     *opt=LB;
