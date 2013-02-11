@@ -1,10 +1,15 @@
-2012-10-30  author  <claudia.gebhardt@uni-klu.ac.at>
+2013-02-11  Claudia Gebhardt <claudia.gebhardt@uni-klu.ac.at>
 
-	* DESCRIPTION, NAMESPACE, R/zzz.R: remove .First.lib
+	* DESCRIPTION, R/dualgreedy.R, R/greedy.R, R/interchange.R, R/maxentropy.R, src/matpr.c, src/matpr.h:
+	fixes for R 3.0
+
+2012-10-30  Claudia Gebhardt <claudia.gebhardt@uni-klu.ac.at>
+
+	* NAMESPACE, R/zzz.R: remove .First.lib
 
 	* src/entrp.c, src/heap.c, src/mwrite.f: cleanup for R 2.15.2
 
-2011-09-29  author  <claudia.gebhardt@uni-klu.ac.at>
+2011-09-29  Claudia Gebhardt <claudia.gebhardt@uni-klu.ac.at>
 
 	* R/monet.R, man/monet.selected.Rd: fix print function
 
@@ -17,69 +22,62 @@
 
 	* src/entrp.h: fixes
 
-	* R/dualgreedy.R, R/greedy.R, R/interchange.R, R/maxentropy.R:
-	introduce a common return object type (monet)
-
 	* src/change.f, src/edesign.h, src/init.c:
 	cleanup, add new citation, finalize correct C API description
 
 	* man/entropy-internal.Rd: rename
 
-2009-09-14  author  <claudia.gebhardt@uni-klu.ac.at>
+2009-09-14  Claudia Gebhardt <claudia.gebhardt@uni-klu.ac.at>
 
 	* src/Makevars: cleanup
 
 	* R/makematrix.R:
 	functions renamed, now passes "R CMD check" with R 2.9.2
 
-2009-09-11  author  <claudia.gebhardt@uni-klu.ac.at>
+2009-09-11  Claudia Gebhardt <claudia.gebhardt@uni-klu.ac.at>
 
 	* src/dgemm.f, src/dgemv.f, src/dger.f, src/dsyevx.f, src/dsymv.f, src/dsyr2.f, src/dsyr2k.f, src/dtrmm.f, src/dtrmv.f:
 	remove duplicates of lapck routines
 
-2009-05-11  author  <claudia.gebhardt@uni-klu.ac.at>
+2009-05-11  Claudia Gebhardt <claudia.gebhardt@uni-klu.ac.at>
 
 	* TITLE, makefile:
 	package rename, to avoid name clash with CRAN package "entropy"
 
-2002-11-03  author  <claudia.gebhardt@uni-klu.ac.at>
+2002-11-03  Claudia Gebhardt <claudia.gebhardt@uni-klu.ac.at>
 
-	* src/heap.h, src/matpr.c: geht wieder ...
+	* src/heap.h: geht wieder ...
 
 	Fehler war: free() auf statisches array int i[1] angewendet!!
 
-2001-01-03  author  <claudia.gebhardt@uni-klu.ac.at>
-
-	* src/matpr.h: manpages and changes for R 1.2.0
-
-2000-12-28  author  <claudia.gebhardt@uni-klu.ac.at>
+2000-12-28  Claudia Gebhardt <claudia.gebhardt@uni-klu.ac.at>
 
 	* src/grd.f: man pages, leadin dims corrected
 
-2000-10-09  author  <claudia.gebhardt@uni-klu.ac.at>
+2000-10-09  Claudia Gebhardt <claudia.gebhardt@uni-klu.ac.at>
 
 	* src/Makefile, src/ch2det.f, src/ch2inv1.f, src/chdet.f, src/chol1.f, src/dscal.f, src/dschur.f, src/grd1.f, src/grddl.f, src/ind.f, src/matpr.f, src/pind.f, src/psubm.f, src/psubv.f, src/subde1.f, src/subdet.f, src/subdin.f, src/subm.f, src/upbnd.f:
 	works again, added lots of leading dimensions, removed unused files.
 
-2000-02-08  author  <claudia.gebhardt@uni-klu.ac.at>
+2000-02-08  Claudia Gebhardt <claudia.gebhardt@uni-klu.ac.at>
 
 	* R/grid.R: some added files
 
-1999-11-09  author  <claudia.gebhardt@uni-klu.ac.at>
+1999-11-09  Claudia Gebhardt <claudia.gebhardt@uni-klu.ac.at>
 
 	* src/twiddle-test.c, src/twiddle.c, src/twiddletest.c, R-gdb-session, Rsession7, Rsession8, octave.txt, .Rhistory, .RData:
 	leeres F gab Fehler, im Greedy geaendert
 
-1999-02-09  author  <claudia.gebhardt@uni-klu.ac.at>
+1999-02-09  Claudia Gebhardt <claudia.gebhardt@uni-klu.ac.at>
 
 	* subdet.f, subdin.f, subm.f, twiddle-test.c, twiddle.c, twiddletest.c, upbnd.f, matpr.f, max.entropy.R, max.entropy.Rd, mwrite.f, neufile, pind.f, psubm.f, psubv.f, subde1.f, grddl.f, greedy.R, greedy.Rd, heap.c, heap.h, ind.f, interchange.R, interchange.Rd, make.matrix.R, dsymv.f, dsyr2.f, dual.greedy.R, dual.greedy.Rd, entrp.c, entrp.h, grd.f, grd1.f, change.f, chdet.f, dgemv.f, dger.f, dscal.f, dschur.f, dsyevx.f, Makefile, ch2det.f:
 	R library erzeugt
 
-1999-02-08  author  <claudia.gebhardt@uni-klu.ac.at>
+1999-02-08  Claudia Gebhardt <claudia.gebhardt@uni-klu.ac.at>
 
 	* max.entropy1.R: funktioniert
 
-1999-02-07  author  <claudia.gebhardt@uni-klu.ac.at>
+1999-02-07  Claudia Gebhardt <claudia.gebhardt@uni-klu.ac.at>
 
 	* entrp.f: Zusatzfiles (lapack,linpack) geholt
 

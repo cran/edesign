@@ -12,7 +12,7 @@ interchange <- function(A,nf,ns,S.start,etol=0,mattest=TRUE)
 
     if(mattest)
       {
-        if(!is.real(eigen(A)$values))
+        if(!is.double(eigen(A)$values))
           stop("Matrix isn't symmetric")
         if(sum(eigen(A)$values>etol)<na)
           stop("Matrix isn't positive definite")

@@ -14,7 +14,7 @@ maxentropy <- function(A,nf,ns,method="d",S.start=NULL,rtol=1e-6,
 
     if(mattest)
       {
-        if(!is.real(eigen(A)$values))
+        if(!is.double(eigen(A)$values))
           stop("Matrix isn't symmetric")
         if(sum(eigen(A)$values>etol)<na)
           stop("Matrix isn't positive definite")

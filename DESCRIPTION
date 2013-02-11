@@ -1,10 +1,10 @@
 Package: edesign
 Title: Maximum entropy sampling
-Version: 1.0-9
+Version: 1.0-10
 Author: Claudia Gebhardt <claudia.gebhardt@uni-klu.ac.at>
 Maintainer: Claudia Gebhardt <claudia.gebhardt@uni-klu.ac.at>
 Description: Maximum entropy sampling
 License: GPL
-Packaged: 2012-10-30 08:04:51 UTC; alge
+Packaged: 2013-02-11 07:16:58 UTC; agebhard
 Repository: CRAN
-Date/Publication: 2012-10-30 08:46:25
+Date/Publication: 2013-02-11 11:12:57
