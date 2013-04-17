@@ -1,5 +1,5 @@
-60de2de04842750dfbf3f2a787a397d3 *ChangeLog
-6c335a84170ae313d63112082d555fb3 *DESCRIPTION
+1ac64844d9a80652e69708e74eb812f1 *ChangeLog
+a5523da115fa408458d385b03b2e7a1f *DESCRIPTION
 dcc3d9c0f0b2ee165e45ba88599c4796 *NAMESPACE
 9666455ab8ad31514b7790cb198b3b49 *R/dualgreedy.R
 2c581d206e0f23ffb29f200af295dcd8 *R/greedy.R
@@ -21,7 +21,7 @@ d6c059b158bd1676b6fdc266014c5cf2 *src/Makevars
 30b37b1f9014ccd0fb2351539cfa4ecb *src/ch2det.f
 bc778e17f236ea560321df96c1e1c0be *src/ch2inv1.f
 a7fac6b012888617ddf5b6b8c83a86a8 *src/change.f
-b5ab769c59dbad05c08151999347169d *src/chdet.f
+65f3285fbd6625a8828d0c8cd4988de7 *src/chdet.f
 4527b630e9b0ad2388cda28c748cf6c6 *src/chol1.f
 119329251ff0de877e7e88853f7acbff *src/dscal.f
 28fedbdcc9e087d56094bd3ac97787df *src/dschur.f

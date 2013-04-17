@@ -8,7 +8,7 @@
       INTEGER            LDA, N
 *     ..
 *     .. Array Arguments ..
-      DOUBLE PRECISION   A(LDA,1)
+      DOUBLE PRECISION   A(LDA,*)
 *     ..
 *
 *  Purpose
