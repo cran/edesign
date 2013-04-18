@@ -107,14 +107,14 @@ heap_type *heap_init()
     heap_type *heap;
 	int *i,*j,*k,*l;
     /* dummy arrays */
-	i=Calloc(1,int);
-	j=Calloc(1,int);
-	k=Calloc(1,int);
-	l=Calloc(1,int);
-    i[1]=0;
-    j[1]=0;
-    k[1]=0;
-    l[1]=0;
+	i=Calloc((size_t)1,int);
+	j=Calloc((size_t)1,int);
+	k=Calloc((size_t)1,int);
+	l=Calloc((size_t)1,int);
+    i[0]=0;
+    j[0]=0;
+    k[0]=0;
+    l[0]=0;
 
     /* 
      * allocate memory, initialize values 

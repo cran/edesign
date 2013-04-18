@@ -2,6 +2,7 @@
 
 ## private CPP flags:
 PKG_CPPFLAGS = # -I./Something
+#PKG_CFLAGS = -fsanitize=address -fno-omit-frame-pointer #  for ASan
 
 ## we use the BLAS and the LAPACK library:
 PKG_LIBS = $(SUBLIBS) $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS)

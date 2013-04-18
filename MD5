@@ -1,5 +1,5 @@
-1ac64844d9a80652e69708e74eb812f1 *ChangeLog
-a5523da115fa408458d385b03b2e7a1f *DESCRIPTION
+da36686450a0b1d0e94877dab87cc154 *ChangeLog
+96e7cf5f3fb4d1ab56b77b7b97824f2d *DESCRIPTION
 dcc3d9c0f0b2ee165e45ba88599c4796 *NAMESPACE
 9666455ab8ad31514b7790cb198b3b49 *R/dualgreedy.R
 2c581d206e0f23ffb29f200af295dcd8 *R/greedy.R
@@ -17,7 +17,7 @@ e58b171cd86faaf75f2345cbe3384757 *man/makematrix.Rd
 90dad6afc22699b721227d89e273b299 *man/monet.Rd
 d49230ba232fdb03c5e6d0005e1df48c *man/monet.selected.Rd
 a4f2446fee1b1ecab4a0ac17bf9728df *man/print.monet.Rd
-d6c059b158bd1676b6fdc266014c5cf2 *src/Makevars
+f0210158b053ee2e67aa4ecbaef43472 *src/Makevars
 30b37b1f9014ccd0fb2351539cfa4ecb *src/ch2det.f
 bc778e17f236ea560321df96c1e1c0be *src/ch2inv1.f
 a7fac6b012888617ddf5b6b8c83a86a8 *src/change.f
@@ -30,7 +30,7 @@ c5d648591675ae434819d13520773c7f *src/entrp.c
 dc450658294ed566302cc9278d469859 *src/entrp.h
 56707d30d82b84fe3de47dff30aadf0a *src/grd.f
 ebb01899c5e9a82f567782d429162840 *src/grddl.f
-9bc9affa63a6c5a3b9a2ef896ea1d34d *src/heap.c
+eedd11c0ff28900c396e7d82b51e4195 *src/heap.c
 5371e92607006aba4441b477cdc73ea9 *src/heap.h
 181e250505fff4e4375efd2792d8ff09 *src/init.c
 e1455edeac1809a6185cc9dd0ddd7fe9 *src/pind.f

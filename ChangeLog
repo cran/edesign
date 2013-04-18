@@ -1,6 +1,10 @@
-2013-04-17  Claudia Gebhardt  <cgebhard@uni-klu.ac.at>
+2013-04-18  Claudia Gebhardt  <cgebhard@uni-klu.ac.at>
 
-	* DESCRIPTION: fixes for R 3
+	* src/Makevars: compiler options for asan, not tested
+
+	* DESCRIPTION, src/heap.c: valgrind checks
+
+2013-04-17  Claudia Gebhardt  <cgebhard@uni-klu.ac.at>
 
 	* src/chdet.f: boundary check fix?
 
@@ -13,7 +17,7 @@
 
 	* NAMESPACE, R/zzz.R: remove .First.lib
 
-	* src/entrp.c, src/heap.c, src/mwrite.f: cleanup for R 2.15.2
+	* src/entrp.c, src/mwrite.f: cleanup for R 2.15.2
 
 2011-09-29  Claudia Gebhardt  <cgebhard@uni-klu.ac.at>
 
@@ -34,8 +38,6 @@
 	* man/entropy-internal.Rd: rename
 
 2009-09-14  Claudia Gebhardt  <cgebhard@uni-klu.ac.at>
-
-	* src/Makevars: cleanup
 
 	* R/makematrix.R:
 	functions renamed, now passes "R CMD check" with R 2.9.2
