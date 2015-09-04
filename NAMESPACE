@@ -4,3 +4,5 @@ useDynLib(edesign)
 exportPattern(".")
 # methods:
 S3method(print, monet)
+#
+importFrom("stats", "runif")
